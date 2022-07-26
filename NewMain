@@ -549,7 +549,7 @@ Tab4Section:NewToggle("Killaura"  , "", function(state)
                                                                 wait()
 
     for i,v in pairs(game.Workspace.BadGuys:GetChildren()) do
-        for i = 1, 200 do
+        for i = 1, 50 do
             game:GetService("ReplicatedStorage").RemoteEvents.HitBadguy:FireServer(v,10)
             game:GetService("ReplicatedStorage").RemoteEvents.HitBadguy:FireServer(v,996)
             game:GetService("ReplicatedStorage").RemoteEvents.HitBadguy:FireServer(v,9)
