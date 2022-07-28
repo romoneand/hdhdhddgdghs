@@ -637,6 +637,17 @@ while wait(1) do
     end
 end)
 
+Tab4Section:NewButton("Heal all Equip medkit first","Heal all", function()
+
+
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+	
+	        game:GetService("ReplicatedStorage").RemoteEvents.CurePlayer:FireServer(v)
+	        game:GetService("ReplicatedStorage").RemoteEvents.HealPlayer:FireServer(v)
+	    
+	    end
+end)
+
 Tab4Section:NewButton("OpenSafe","Open safe", function()
 
 game.ReplicatedStorage.RemoteEvents.Safe:FireServer(game:GetService("Workspace").CodeNote.SurfaceGui.TextLabel.Text)
