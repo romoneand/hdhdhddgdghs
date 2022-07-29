@@ -780,27 +780,6 @@ end
  
 
  
-Tab1Section:NewToggle("CFrame", "", function(state)
-	if state then
-		BindToStepped("CFrameWalkSpeed", 1, function(time, delta)
-			if entity.isAlive then
-				local newpos = (lplr.Character.Humanoid.MoveDirection  * (speedval["Value"] - lplr.Character.Humanoid.WalkSpeed)) * delta
-
-				local raycastparameters = RaycastParams.new()
-				raycastparameters.FilterDescendantsInstances = {lplr.Character}
-				local ray = workspace:Raycast(lplr.Character.HumanoidRootPart.Position, newpos, raycastparameters)
-				if ray then newpos = (ray.Position - lplr.Character.HumanoidRootPart.Position) end
-				lplr.Character.HumanoidRootPart.CFrame = lplr.Character.HumanoidRootPart.CFrame + newpos
-			end
-		end)
-	else
-		UnbindFromStepped("CFrameWalkSpeed")
-	end
-end)
-
-Tab1Section:NewSlider("Speed 1-42", "Adjust CFrame speed", 42, 1, function(s)
-	speedval["Value"] = s
-end)
 
 
 local Tab1 = Window:NewTab("Credits & Update") 
@@ -1339,6 +1318,29 @@ Tab6Section:NewSlider("FOV", "FOV", 120, 70, function(s)
 game.Workspace.Camera.FieldOfView = s 
 
 end) 
+
+Tab6Section:NewToggle("CFrame", "", function(state)
+	if state then
+		BindToStepped("CFrameWalkSpeed", 1, function(time, delta)
+			if entity.isAlive then
+				local newpos = (lplr.Character.Humanoid.MoveDirection  * (speedval["Value"] - lplr.Character.Humanoid.WalkSpeed)) * delta
+
+				local raycastparameters = RaycastParams.new()
+				raycastparameters.FilterDescendantsInstances = {lplr.Character}
+				local ray = workspace:Raycast(lplr.Character.HumanoidRootPart.Position, newpos, raycastparameters)
+				if ray then newpos = (ray.Position - lplr.Character.HumanoidRootPart.Position) end
+				lplr.Character.HumanoidRootPart.CFrame = lplr.Character.HumanoidRootPart.CFrame + newpos
+			end
+		end)
+	else
+		UnbindFromStepped("CFrameWalkSpeed")
+	end
+end)
+
+Tab6Section:NewSlider("Speed 1-42", "Adjust CFrame speed", 42, 1, function(s)
+	speedval["Value"] = s
+end)
+
 
 Tab6Section:NewSlider("Speed", "Speed Change", 500, 16, function(s) -- 500 (MaxValue) | 16 (MinValue) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s 
 
