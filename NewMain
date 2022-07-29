@@ -946,9 +946,9 @@ game:GetService("ReplicatedStorage").RemoteEvents.GetKeys:FireServer()
 
 end)
 
-local Tab5 = Window:NewTab("Player")
+local Tab6 = Window:NewTab("Player")
 
-local Tab5Section = Tab5:NewSection("Players") 
+local Tab6Section = Tab6:NewSection("Players") 
 
 Tab6Section:NewSlider("FOV", "FOV", 120, 70, function(s) 
 
