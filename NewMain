@@ -944,7 +944,7 @@ game:GetService("ReplicatedStorage").RemoteEvents.GetKeys:FireServer()
 
 end)
 
-Tab5Section:NewButton("Easter Event","Auto easter event", function()
+Tab5Section:NewButton("Easter Event click when see the npc","Auto easter event", function()
 
 local args = {
     [1] = 1,
