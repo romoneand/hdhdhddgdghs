@@ -787,7 +787,7 @@ local Target = game:GetService("ReplicatedStorage").RemoteEvents.Cattery;
 
 end)
 
-Tab4Section:NewToggle("Killaura"  , "", function(state)
+Tab4Section:NewToggle("Killaura Always off bc it very lag"  , "", function(state)
                                                             if state then
                                                                 _G.on = true
                                                                 
@@ -797,7 +797,7 @@ Tab4Section:NewToggle("Killaura"  , "", function(state)
                                                                 wait()
 
     for i,v in pairs(game.Workspace.BadGuys:GetChildren()) do
-        for i = 1, 50 do
+        for i = 1, 25 do
             game:GetService("ReplicatedStorage").RemoteEvents.HitBadguy:FireServer(v,10)
             game:GetService("ReplicatedStorage").RemoteEvents.HitBadguy:FireServer(v,996)
             game:GetService("ReplicatedStorage").RemoteEvents.HitBadguy:FireServer(v,9)
@@ -939,10 +939,57 @@ game.StarterGui:SetCore("SendNotification", {
     Text = "Getting key";
     Duration = 2.5;
 })
-
   
 game:GetService("ReplicatedStorage").RemoteEvents.GetKeys:FireServer()
 
+end)
+
+Tab5Section:NewButton("Easter Event","Auto easter event", function()
+
+local args = {
+    [1] = 1,
+    [2] = "IcePart1"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggHuntEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = 2,
+    [2] = "IcePart1"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggHuntEvent:FireServer(unpack(args))
+
+wait(0)
+
+local args = {
+    [1] = 1,
+    [2] = "IcePart2"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggHuntEvent:FireServer(unpack(args))
+local args = {
+    [1] = 2,
+    [2] = "IcePart2"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggHuntEvent:FireServer(unpack(args))
+
+wait(0)
+
+local args = {
+    [1] = 1,
+    [2] = "IcePart3"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggHuntEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = 2,
+    [2] = "IcePart3"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.EggHuntEvent:FireServer(unpack(args))
 
 end)
 
