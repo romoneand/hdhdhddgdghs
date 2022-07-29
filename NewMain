@@ -478,6 +478,10 @@ setclipboard("discord.gg/r2P6xbUfnV")
 
 end)
 
+local Tab1Section = Tab1:NewSection("credit ui kavo") 
+
+local Tab1Section = Tab1:NewSection("this script hub made by romoneand#3770")
+
 local Tab1Section = Tab1:NewSection("Added Player window") 
 
 local Tab1Section = Tab1:NewSection("Infjump") 
@@ -487,12 +491,7 @@ local Tab1Section = Tab1:NewSection("Speed")
 local Tab1Section = Tab1:NewSection("Jumppower") 
 
 local Tab1Section = Tab1:NewSection("Fov") 
-
-local Tab1Section = Tab1:NewSection("credit ui kavo") 
-
-local Tab1Section = Tab1:NewSection("this script hub made by romoneand#3770") 
-
-local Tab1Section = Tab1:NewSection("settings ") 
+ 
 
  
 local Tab2 = Window:NewTab("Main")
