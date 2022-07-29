@@ -1004,7 +1004,8 @@ game.Workspace.Camera.FieldOfView = s
 end)
 
 Tab6Section:NewSlider("Speed", "Speed Change", 500, 16, function(s) -- 500 (MaxValue) | 16 (MinValue) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s 
-game.Players.LocalPlayer.Character.Humanoid.Speed = s
+
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 
 end) 
 
