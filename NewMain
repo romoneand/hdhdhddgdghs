@@ -700,9 +700,27 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-49, 19,
 
 end)
 
+Tab3Section:NewButton("pink room","Teleport u to Pink room", function()
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2, 19, -228)
+
+end)
+
+Tab3Section:NewButton("Green room","Teleport u to Green room", function()
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, 19, -200)
+
+end)
+
+Tab3Section:NewButton("Bath room","Teleport u to Bath room", function()
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-14, 19, -189)
+
+end)
+
 Tab3Section:NewButton("House","Teleport u to House", function()
 
- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-36, 3, -200)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-36, 3, -200)
  
 end)
 
