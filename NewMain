@@ -694,7 +694,7 @@ local Tab3 = Window:NewTab("teleport")
 
 local Tab3Section = Tab3:NewSection("teleport") 
 
-Tab3Section:NewButton("House","Teleport u to House", function()
+Tab3Section:NewButton("Blue room","Teleport u to Blue room", function()
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-49, 19, -215)
 
