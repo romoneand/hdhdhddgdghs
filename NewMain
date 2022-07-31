@@ -751,6 +751,15 @@ Tab3Section:NewButton("Sewer","teleport to Sewer", function()
 
 end)
 
+Tab3Section:NewButton("in Sewer","teleport to in Sewer", function()
+     
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(266, -261, -1585)
+
+end)
+
+ 
+
 Tab3Section:NewButton("Boss room","teleport to Boss room", function()
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-52, -287, -1474)
@@ -927,6 +936,46 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-23, 19,
 
 
 end)
+
+Tab4Section:NewButton("Drown yourself","DIE", function()
+
+local args = {
+    [1] = 1,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.ToxicDrown:FireServer(unpack(args))
+
+end)
+
+Tab4Section:NewToggle("Spam cat sound cat friendly first"  , "", function(state)
+                                                            if state then
+                                                                _G.on = true
+                                                                
+                                                                while _G.on == true do
+                                                                    wait()
+                                                                
+                                                                wait()
+
+    local args = {
+    [1] = workspace.TheHouse.SmallCat.Purr,
+    [2] = true,
+    [3] = 4
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Sounds:FireServer(unpack(args))
+
+                                                                wait(0)
+                                                                
+                                                                    end
+                                                                    else
+                                                                _G.on = false
+                                                                        
+                                                                    end
+                                                                end)
+
+
+266, -261, -1585
 
  local Tab5 = Window:NewTab("Auto Ending")
 
