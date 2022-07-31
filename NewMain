@@ -693,6 +693,16 @@ game:GetService("ReplicatedStorage").RemoteEvents.BuyItem:FireServer(unpack(args
 
 end)
 
+Tab2Section:NewButton("Expired bloxycola","Bad water", function()
+  
+  local args = {
+    [1] = "ExpiredBloxyCola"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItem:FireServer(unpack(args))
+                            
+end)
+
 
 local Tab3 = Window:NewTab("teleport")
 
@@ -970,11 +980,10 @@ game:GetService("ReplicatedStorage").RemoteEvents.Sounds:FireServer(unpack(args)
                                                                     end
                                                                     else
                                                                 _G.on = false
-                                                                        
-                                                                    end
-                                                                end)
+                                                                     end
 
- local Tab5 = Window:NewTab("Auto Ending")
+  end) 
+
 
 local Tab5Section = Tab5:NewSection("Ending") 
 
